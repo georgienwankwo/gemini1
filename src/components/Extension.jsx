@@ -1,7 +1,9 @@
+import { ThemeContext } from "../context/themeContext"
 import lists from "../data.json"
-import { useState } from "react"
+import { useContext, useState } from "react"
 
 export default function Extension(){
+const {themeMode} = useContext(ThemeContext)
 const[toogle, setToggle]= useState(true)
 
 function handleDelete(){
@@ -11,7 +13,7 @@ function handleDelete(){
         <div className="extension">
             {lists.map((item)=>{
                 return(
-                    <div className="extension--card" key={item.id}>
+                    <div className={`extension--card ${themeMode === 'light' ? 'light-theme-mode': 'dark-theme-mode'}`} key={item.id}>
                         <div className="extension--card__despcontainer" >
                                 <img src={item.logo} alt="" />
                             <div className="extension--card__desp">

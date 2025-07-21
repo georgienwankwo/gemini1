@@ -10,14 +10,12 @@
 
   color-scheme: light dark;
   /* background: linear-gradient( #EBF2FC 0%, #EEF8F9 100%); */
-  background-color: #EBF2FC;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 body {
   margin: 0;

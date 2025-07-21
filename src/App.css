@@ -6,10 +6,6 @@
   font-style: normal;
 }
 #root {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: 'Notosans';
   --Neutral--900: hsl(227, 75%, 14%);
 --Neutral--800: hsl(226, 25%, 17%);
 --Neutral--700: hsl(225, 23%, 24%);
@@ -22,11 +18,25 @@
 --Background-white: #ffffff;
 }
 
+.body--section-container{
+}
+
+.root_background_light{
+  background-color: var(--Background-1);
+}
+
+.root_background_dark{
+  background-color: var(--Neutral--900);
+}
 
 
 .body--section{
 max-width: 80rem;
+  /* margin: 0 auto; */
+    padding: 2rem;
+  max-width: 1440px;
   margin: 0 auto;
+  font-family: 'Notosans';
   /* background-color: #EBF2FC; */
 }
 .navbar--section{
@@ -44,6 +54,11 @@ max-width: 80rem;
   padding: 9px;
   border-radius: 10px;
 }
+
+.navbar--section-dark-mode{
+  background-color: var(--Neutral--700) !important;
+}
+
 .navbar--section img{
 vertical-align: middle;
 }
@@ -52,7 +67,6 @@ vertical-align: middle;
   justify-content: space-between;
   margin: 2rem 0;
   align-items: center;
-  color: var(--Neutral--900);
 }
 .extension__menu{
 display:flex ;
@@ -66,9 +80,13 @@ gap: 1rem;
   border: none;
   border-radius: 20px;
   background-color:var(--Background-white) ;
-  color: var(--Neutral--900);
   font-size: 1rem;
 }
+
+.non-active{
+  color: var(--Neutral--900)
+}
+
 .extension{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -92,10 +110,10 @@ gap: 1rem;
   border: 2px solid var(--Neutral--300);
   padding: 7px 10px;
   text-transform: capitalize;
-  color: var(--Neutral--900);
   font-weight: 500;
   font-size: 1rem;
-  border-radius:15px ;
+  border-radius:15px;
+  color: inherit
 }
 .extension--card__button:hover{
   transition: 200ms ease-in-out all;
@@ -112,12 +130,11 @@ gap: 1rem;
 }
 .extension--card__desp h3{
 margin: 0px 0px .5rem;
-color: var(--Neutral--900);
 }
 .extension--card__desp p{
   margin: 0;
   font-size: 0.9rem;
-  color: var(--Neutral--900);
+
 }
 .extension--card__buttonsection{
   display: flex;
@@ -125,7 +142,16 @@ color: var(--Neutral--900);
   justify-content: space-between;
 }
 .active{
-  background-color: red;
+  background-color: red !important;
+  color: white !important
 }
 
+.light-theme-mode{
+  background-color: var(--Background-white);
+  color: var(--Neutral--900)
+}
 
+.dark-theme-mode{
+  background-color: var(--Neutral--900);
+  color: var(--Background-white)
+}
